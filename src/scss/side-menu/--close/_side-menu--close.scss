@@ -1,3 +1,9 @@
 .side-menu--close{
     transform: translateX(-150%);
 }
+
+@media (min-width: 1120px) {
+    .side-menu--close{
+        transform: translateX(0);
+    }
+}
