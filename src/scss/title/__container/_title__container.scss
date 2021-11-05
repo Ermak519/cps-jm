@@ -1,0 +1,9 @@
+.title__container {
+    display: none;
+}
+
+@media (min-width: 1120px) {
+    .title__container{
+        display: flex;
+    }
+}

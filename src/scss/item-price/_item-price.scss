@@ -1,0 +1,11 @@
+.item-price{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px
+}
+
+@import '../item-price/__serv/_item-price__title';
+@import '../item-price/__cost/_item-price__cost';
+@import '../item-price/__term/_item-price__term';
+@import '../item-price/__btn/_item-price__btn';

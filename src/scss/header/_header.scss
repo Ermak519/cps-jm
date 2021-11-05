@@ -1,0 +1,14 @@
+.header{
+    background-color: $bgBody;
+    .container{
+        padding-top: 24px;
+        padding-bottom: 18px;
+        padding-right: 24px;
+    }
+} 
+
+@media (min-width: 1120px) {
+    .header{
+        display: none;
+    }
+}

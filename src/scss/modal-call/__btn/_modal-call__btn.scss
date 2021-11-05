@@ -1,0 +1,16 @@
+.modal-call__btn{
+    margin-right: 16px;
+    transition:filter 0.3s ease-in-out;
+
+    cursor: pointer;
+    border: none;
+    background-color: $bgBody;
+
+    &:hover{
+        filter: opacity(65%);
+    }
+
+    &:focus{
+        filter: opacity(65%);
+    }
+}

@@ -1,0 +1,9 @@
+.brend-wrappper{
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+@import '../brend-wrapper/--show/_brend-wrapper--show';
+@import '../brend-wrapper/--hide/_brend-wrapper--hide';

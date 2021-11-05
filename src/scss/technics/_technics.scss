@@ -1,0 +1,17 @@
+.technics{
+    display: none;
+    background-color: $bgColor;
+}
+
+@media (min-width: 768px) {
+    .technics{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+@import '../technics/__list/_technics__list';
+@import '../technics/__item/_technics__item';
+@import '../technics/__full/_technics__full';

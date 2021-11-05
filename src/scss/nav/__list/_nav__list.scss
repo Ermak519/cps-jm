@@ -1,0 +1,48 @@
+.nav__list{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.contacts{
+        display: none;
+    }
+
+    &.main{
+        width: 40px;
+        height: 40px;
+        margin-left: 16px;
+    }
+
+    &.logo{
+        width: 97px;
+        height: 51px;
+        flex: 1;
+        margin-left: 16px;
+    }
+
+    &.service{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav__list{
+        &.contacts{
+            display: flex;
+        }
+
+        &.main{
+            &::after{
+                content: "";
+                height: 32px;
+                border: 1px solid $borderColor;
+                border-radius: 2px;
+            }
+        }
+    }
+
+
+}

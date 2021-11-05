@@ -1,0 +1,16 @@
+.service {
+    .nav__item{
+        width: 40px;
+    height: 40px;
+    }
+
+    &::before{
+        content: "";
+        height: 32px;
+        border: 1px solid $borderColor;
+        border-radius: 2px;
+        margin-left: 20px;
+    }
+}
+
+@import '../service/__item/_service__item';

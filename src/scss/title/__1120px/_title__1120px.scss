@@ -1,0 +1,21 @@
+.title__1120px{
+    display: flex;
+    align-items: center;
+
+    &:first-child{
+        margin-right: 32px;
+    }
+    &:last-child{
+        margin-right: 30px;
+    }
+
+    p{
+        margin: 0;
+        margin-right: 8px;
+        font-family: 'TT Lakes Medium';
+        font-size: 16px;
+        line-height: 24px;
+        text-align: right;
+        color: $pText;
+    }
+}

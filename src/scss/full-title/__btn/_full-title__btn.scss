@@ -1,0 +1,19 @@
+.full-title__btn{
+    font-family: 'TT Lakes Medium';
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 320px) {
+    .full-title__btn{
+        display: flex;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1500px) {
+    .full-title__btn{
+        display: none;
+    }
+}
+    

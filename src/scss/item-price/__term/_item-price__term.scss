@@ -1,0 +1,12 @@
+.item-price__term{
+    display: flex;
+    
+
+    span:first-child{
+        color: $btnText;
+    }
+
+    p {
+        margin-right: 20px;
+    }
+}

@@ -1,0 +1,14 @@
+.price-table{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .price-table{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 24px;
+    }
+}
+
+@import '../price-table/__table/_price-table__table';
+@import '../price-table/__wrapper/_price-table__wrapper';

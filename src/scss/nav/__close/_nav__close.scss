@@ -1,0 +1,18 @@
+.nav__close{
+    margin-right: 16px;
+    transition:filter 0.3s ease-in-out;
+
+    &:hover{
+        filter: opacity(65%);
+    }
+
+    &:focus{
+        filter: opacity(65%);
+    }
+}
+
+@media (min-width: 1120px) {
+    .nav__close{
+        display: none;
+    }
+}

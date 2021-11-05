@@ -1,0 +1,36 @@
+.modal-call{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 320px;
+    height: 100vh;
+    z-index: 1;
+    
+    transform: scaleX(0);
+    
+    .container{
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        background-color: $bgBody;
+
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1120px) {
+    .modal-call {
+        width: 440px;
+    }
+}
+
+@import '../modal-call/__btn/_modal-call__btn';
+@import '../modal-call/__form/_modal-call__form';
+@import '../modal-call/__nav/_modal-call__nav';
+@import '../modal-call/__title/_modal-call__title';
+@import '../modal-call/--close/_modal-call--close';
+@import '../modal-call/--open/_modal-call--open';

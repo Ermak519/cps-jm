@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 51px;
+}
+
+@import '../nav/__list/_nav__list';
+@import '../nav/__item/_nav__item';
+@import '../nav/__close/_nav__close';
+@import '../nav/__logo/_nav__logo';
+@import '../nav/__search/_nav__search';

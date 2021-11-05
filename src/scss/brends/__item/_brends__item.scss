@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+    .brends__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        flex-grow: 1;
+    
+        height: 72px;
+        width: 205px;
+    
+        padding: 20px 16px;
+        margin-top: 16px;
+        margin-right: 32px;
+    
+        background: $bgBody;
+        border: 1px solid $borderColor;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+}

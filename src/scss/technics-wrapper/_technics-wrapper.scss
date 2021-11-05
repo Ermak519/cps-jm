@@ -1,0 +1,9 @@
+.technics-wrappper{
+    width: 100%;
+    padding-left: 24px;
+    padding-top: 24px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+@import '../technics-wrapper/--show/_technics-wrapper--show';
+@import '../technics-wrapper/--hide/_technics-wrapper--hide';

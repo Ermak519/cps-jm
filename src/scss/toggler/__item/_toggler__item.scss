@@ -1,0 +1,16 @@
+.toggler__item{
+    margin-right: 7px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        color: $btnText;
+        cursor: pointer;
+    }
+
+    &:focus{
+        color: $btnText;
+        cursor: pointer;
+    }
+}
+
+@import '../__item/--focus/toggler__item--focus'

@@ -1,0 +1,11 @@
+.wrapper__main{
+    max-width: 1640px;
+    overflow: hidden;
+    background-color: $bgColor;
+}
+
+@media (min-width: 1120px) {
+    .wrapper__main{
+    margin-left: 320px;
+    }
+}

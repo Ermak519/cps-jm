@@ -1,0 +1,8 @@
+.commerce{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $lineBorder;
+}
+
+@import '../commerce/__title/_commerce__title';
+@import '../commerce/__get/_commerce__get';

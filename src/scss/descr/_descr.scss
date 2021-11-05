@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+    .descr{
+        display: flex;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
+
+@import '../descr/__media/_descr__media';
+@import '../descr/__title/_descr__title';
+

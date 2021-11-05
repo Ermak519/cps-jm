@@ -1,0 +1,40 @@
+@media (min-width: 768px) {
+    .technics__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        flex-shrink: 0;
+    
+        min-height: 160px;
+        width: 224px;
+    
+        padding: 16px;
+        margin-bottom: 16px;
+    
+        background: $bgBody;
+        border: 1px solid $borderColor;
+        box-sizing: border-box;
+        border-radius: 6px;
+
+        font-family: 'TT Lakes Medium';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $pText;
+    
+        &:not(:last-child){
+            margin-right: 16px;
+        }
+    
+        p {
+            align-self: flex-start;
+        }
+    
+        a {
+            width: 40px;
+            height: 40px;
+            align-self: flex-end;
+        }
+    }
+}
