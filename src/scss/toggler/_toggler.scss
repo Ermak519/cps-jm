@@ -1,2 +1,28 @@
-@import '../toggler/__list/_toggler__list';
-@import '../toggler/__item/_toggler__item';
+.toggler{
+    &__list{
+        display: flex;
+        justify-content: start;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    &__item{
+        margin-right: 7px;
+        transition: all 0.2s ease-in-out;
+    
+        &:hover{
+            color: $btnText;
+            cursor: pointer;
+        }
+    
+        &:focus{
+            color: $btnText;
+            cursor: pointer;
+        }
+
+        &--focus{
+            color: $btnText;
+        }
+    }
+    
+}

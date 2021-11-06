@@ -1,1 +1,14 @@
-@import '../feedback/__item/_feedback__item'
+.feedback{
+    &__item{
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+    
+        &:hover{
+            color: $btnText;
+        }
+    
+        &:focus{
+            color: $btnText;
+        }
+    }
+}

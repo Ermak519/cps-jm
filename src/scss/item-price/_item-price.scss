@@ -2,10 +2,59 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 14px
-}
+    font-size: 14px;
 
-@import '../item-price/__serv/_item-price__title';
-@import '../item-price/__cost/_item-price__cost';
-@import '../item-price/__term/_item-price__term';
-@import '../item-price/__btn/_item-price__btn';
+    &__btn {
+        display: flex;
+        flex-shrink: 0;
+        justify-content: space-around;
+        align-items: center;
+        flex-grow: 1;
+    
+        background: $btnForm;
+        color: $bgBody;
+        font-family: 'TT Lakes Medium';
+        font-size: 12px;
+        border: none;
+        border-radius: 16px;
+        padding-left: 12px;
+        padding-right: 8px;
+    
+        height: 32px;
+    
+        a {
+            width: 24px;
+            height: 24px;
+        }
+        p {
+            margin-right: 1px;
+        }
+    }
+
+    &__cost{
+        margin-bottom: 16px;
+        p:first-child{
+            color: $btnText;
+        }
+    }
+
+    &__title{
+        margin-bottom: 16px;
+    
+        p:first-child{
+            color: $btnText;
+        }
+    }
+
+    &__term{
+        display: flex;
+        justify-content: space-between;
+        span:first-child{
+            color: $btnText;
+        }
+    
+        p {
+            margin-right: 20px;;
+        }
+    }
+}

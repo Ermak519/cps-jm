@@ -2,8 +2,9 @@ import '../scss/style.scss';
 
 console.log('Works!');
 
-//боковое меню
 const mainWrapper = document.querySelector('.wrapper__main');
+
+//боковое меню
 const burgerMenu = document.querySelector('.nav__item.menu');
 const closeMenu = document.querySelector('.nav__close');
 const sideMenu = document.querySelector('.side-menu');
@@ -17,10 +18,10 @@ const callBtn = document.querySelectorAll('.call');
 const callCloseBtn = modalCall.querySelector('.modal-call__btn');
 
 //Ремонт техники различных брендов
-const fullBrandsBtn = document.querySelector('.brends__full');
-const brandWrapper = document.querySelector('.brend-wrappper');
-const brendArrow = fullBrandsBtn.querySelector('.brends__arow');
-const brandsTxt = fullBrandsBtn.querySelector('.brends__toggle');
+const fullBrendsBtn = document.querySelector('.brends__full');
+const brendWrapper = document.querySelector('.brend-wrappper');
+const brendArrow = fullBrendsBtn.querySelector('.brends__arow');
+const brendsTxt = fullBrendsBtn.querySelector('.brends__toggle');
 
 //Ремонт техники видов техники
 const fullTechBtn = document.querySelector('.technics__full');
@@ -41,63 +42,70 @@ const closeModal = (modalName, closeClass, openClass) => {
     mainWrapper.style.filter = "";
 }
 
+const caseShowHide = (wrapper, classShow, classHide, text, arow, arowClass) => {
+    wrapper.style.transition = "all 0.3s ease";
+    wrapper.classList.toggle(classShow);
+    wrapper.classList.toggle(classHide);
+
+    arow.classList.toggle(arowClass);
+
+    if (text.textContent === 'Показать все') {
+        text.textContent = 'Скрыть';
+    } else {
+        text.textContent = 'Показать все';
+    }
+}
+
 callBtn.forEach((elem) => {
     elem.addEventListener('click', () => {
         openModal(modalCall, 'modal-call--close', 'modal-call--open')
+        document.body.style.overflow = 'hidden';
     })
 });
 
 feedbackBtn.forEach((elem) => {
     elem.addEventListener('click', () => {
-        openModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open')
+        openModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open');
+        document.body.style.overflow = 'hidden';
     })
 });
 
 feedbackCloseBtn.addEventListener('click', () => {
-    closeModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open')
+    closeModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open');
+    document.body.style.overflow = '';
 });
 
 callCloseBtn.addEventListener('click', () => {
-    closeModal(modalCall, 'modal-call--close', 'modal-call--open')
+    closeModal(modalCall, 'modal-call--close', 'modal-call--open');
+    document.body.style.overflow = '';
 });
 
 burgerMenu.addEventListener('click', () => {
-    openModal(sideMenu, 'side-menu--close', 'side-menu--open')
+    openModal(sideMenu, 'side-menu--close', 'side-menu--open');
+    document.body.style.overflow = 'hidden';
 });
 
 closeMenu.addEventListener('click', () => {
-    closeModal(sideMenu, 'side-menu--close', 'side-menu--open')
+    closeModal(sideMenu, 'side-menu--close', 'side-menu--open');
+    document.body.style.overflow = '';
 });
 
-fullBrandsBtn.addEventListener('click', () => {
-    brandWrapper.style.transition = "all 0.3s ease";
-    brandWrapper.classList.toggle('brend-wrappper--show');
-    brandWrapper.classList.toggle('brend-wrappper--hide');
-
-    brendArrow.classList.toggle('brands__arow--transform');
-
-    if (brandsTxt.textContent === 'Показать все') {
-        brandsTxt.textContent = 'Скрыть';
-    } else {
-        brandsTxt.textContent = 'Показать все';
-    }
+fullBrendsBtn.addEventListener('click', () => {
+    caseShowHide(brendWrapper, 'brend-wrappper--show', 'brend-wrappper--hide', brendsTxt, brendArrow, 'brends__arow--transform');
 });
 
 fullTechBtn.addEventListener('click', () => {
-    techWrapper.style.transition = "all 0.3s ease";
-    techWrapper.classList.toggle('technics-wrappper--show');
-    techWrapper.classList.toggle('technics-wrappper--hide');
+    caseShowHide(techWrapper, 'technics-wrappper--show', 'technics-wrappper--hide', techTxt, techArrow, 'technics__arow--transform');
+});
 
-    techArrow.classList.toggle('technics__arow--transform');
 
-    if (techTxt.textContent === 'Показать все') {
-        techTxt.textContent = 'Скрыть';
-    } else {
-        techTxt.textContent = 'Показать все';
+mainWrapper.addEventListener('click', (e) => {
+    if (e.target === mainWrapper) {
+        closeModal(sideMenu, 'side-menu--close', 'side-menu--open');
+        closeModal(modalCall, 'modal-call--close', 'modal-call--open');
+        closeModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open');
     }
 })
-
-
 
 
 

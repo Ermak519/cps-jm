@@ -1,1 +1,16 @@
-@import '../full-title/__btn/_full-title__btn'
+.full-title{
+    &__btn{
+        font-family: 'TT Lakes Medium';
+        margin: 0;
+        margin-bottom: 16px;
+
+        @media (min-width: 320px) {
+            display: flex;
+            cursor: pointer;
+        }
+        
+        @media (min-width: 1500px) {
+            display: none;
+        }
+    }
+}

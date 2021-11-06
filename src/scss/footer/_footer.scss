@@ -1,10 +1,83 @@
-// боковое меню
-@import '../footer/__contacts/_footer__contacts';
-@import '../footer/__phone/_footer__phone';
-@import '../footer/__item/_footer__item';
-@import '../footer/__feedback/_footer__feedback';
-@import '../footer/__mail/_footer__mail';
+.footer{
+    &__contacts{
+        display: flex;
+        justify-content: start;
+        padding: 0;
+    
+        img{
+            margin-right: 16px;
+        }
+    }
 
-// главная страница футер
-@import '../footer/__links/_footer__links';
-@import '../footer/__link/_footer__link';
+    &__feedback{
+        padding: 0;
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 16px;
+    
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__link{
+        text-align: center;
+        font-size: 14px;
+        line-height: 16px;
+        color: $btnText;
+        margin-bottom: 16px;
+    
+        @media (min-width: 768px) {
+            &:nth-child(1){
+                text-align: left;
+                width:218px;
+                margin-bottom: 41px;
+            }
+            &:nth-child(2){
+                flex: 1;
+            }
+            &:nth-child(3){
+                width: 213px;
+                text-align: right;
+                margin-bottom: 25px;
+                padding-right: 24px;
+            }
+        }
+    
+        &:first-child{
+            margin-top: 16px;
+        }
+    
+        &:last-child{
+            margin-bottom: 19px;
+        }
+    }
+
+    &__item{
+        transition: 0.1s filter ease-in-out;
+    
+        &:hover{
+            filter: hue-rotate(70deg) opacity(90%);
+            cursor: pointer;
+        }
+    
+        &:focus{
+            filter: hue-rotate(70deg) opacity(90%);
+            cursor: pointer;
+        }
+    }
+
+    &__mail{
+        margin-top: 16px;
+        margin-bottom: 12px;
+    }
+
+    &__phone{
+        font-family: 'TT Lakes Bold';
+    }
+}

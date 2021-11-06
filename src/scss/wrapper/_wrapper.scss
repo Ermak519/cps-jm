@@ -2,7 +2,14 @@
     position: relative;
     margin:0 auto;
     overflow: hidden;
+
+    &__main{
+        max-width: 1640px;
+        overflow: hidden;
+        background-color: $bgColor;
+
+        @media (min-width: 1120px) {
+            margin-left: 320px;
+        }
+    }
 }
-
-
-@import '../wrapper/__main/_wrapper__main'

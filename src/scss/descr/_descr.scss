@@ -1,11 +1,23 @@
-@media (min-width: 768px) {
-    .descr{
+.descr{
+    @media (min-width: 768px) {
         display: flex;
         padding-right: 24px;
         padding-left: 24px;
     }
-}
 
-@import '../descr/__media/_descr__media';
-@import '../descr/__title/_descr__title';
+    &__title{
+        padding-right: 16px;
+        padding-left: 16px;
+
+        @media (min-width: 768px) {
+            padding-right: 40px;
+            padding-left: 0;
+
+        }
+    }
+
+    &__media{
+        width: 100%;
+    }
+}
 

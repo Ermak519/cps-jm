@@ -1,20 +1,17 @@
-@media (min-width: 320px) {
-    .img768{
+.img768{
+    @media (min-width: 320px) {
         display: none;
         border-radius: 6px;
     }
-}
-
-@media (min-width: 768px) {
-    .img768{
+    
+    @media (min-width: 768px) {
         display: flex;
         margin: 0;
         width: 100%;
     }
-}
-
-@media (min-width: 1120px) {
-    .img768{
+    
+    @media (min-width: 1120px) {
         display: none;
     }
 }
+

@@ -2,7 +2,61 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid $lineBorder;
-}
 
-@import '../commerce/__title/_commerce__title';
-@import '../commerce/__get/_commerce__get';
+    &__title{
+        font-family: 'TT Lakes Regular';
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 25px;
+    
+        font-size: 14px;
+        line-height: 20px;
+        color: $pText;
+    
+        @media (min-width: 768px) {
+            width: 420px;
+        }
+    }
+
+    &__get{
+        display: flex;
+        font-family: 'TT Lakes Medium';
+        margin-bottom: 40px;
+        margin-left: 16px;
+    
+        @media (min-width: 768px) {
+            a {
+                flex-direction: row;
+        
+                &:first-child{
+                    display: none;
+                }
+        
+                &:last-child{
+                    display: flex;
+                }
+            }
+        }
+        
+        a {
+            display: flex;
+            flex-direction: column;
+            font-family: 'TT Lakes Medium';
+            color: $pText;
+    
+            &:last-child{
+                display: none;
+            }
+        }
+    
+        &.link{
+            margin-left: 0;
+            align-items: center;
+            margin-bottom: 0;
+    
+            img{
+                margin-left: 8px;
+            }
+        }
+    }
+}

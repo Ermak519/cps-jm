@@ -1,8 +1,4 @@
 .service {
-    .nav__item{
-        width: 40px;
-    height: 40px;
-    }
 
     &::before{
         content: "";
@@ -11,6 +7,17 @@
         border-radius: 2px;
         margin-left: 20px;
     }
-}
 
-@import '../service/__item/_service__item';
+    .nav__item{
+        width: 40px;
+        height: 40px;
+    }
+
+    &__item {
+        margin-left: 20px;
+        
+        &:nth-child(2){
+            padding-right: 24px;
+        }
+    }
+}
