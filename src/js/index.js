@@ -4,7 +4,7 @@ console.log('Works!');
 
 
 const mainWrapper = document.querySelector('.wrapper__main');
-const wrapper = document.querySelector('.wrapper');
+const main = document.querySelector('.main');
 
 //боковое меню
 const burgerMenu = document.querySelector('.nav__item.menu');
@@ -51,7 +51,10 @@ burgerMenu.addEventListener('click', () => {
     document.body.style.overflow = 'hidden';
 });
 
-closeMenu.addEventListener('click', () => {
+closeMenu.addEventListener('click', (e) => {
+    if (e.target !== sideMenu) {
+        sideMenu.classList.remove('side-menu--open')
+    }
     sideMenu.classList.remove('side-menu--open')
     mainWrapper.style.filter = "";
     document.body.style.overflow = '';
