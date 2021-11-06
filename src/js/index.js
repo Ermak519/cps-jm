@@ -2,8 +2,9 @@ import '../scss/style.scss';
 
 console.log('Works!');
 
-const modalWrapper = document.querySelector('.wrapper__modal');
+
 const mainWrapper = document.querySelector('.wrapper__main');
+const wrapper = document.querySelector('.wrapper');
 
 //боковое меню
 const burgerMenu = document.querySelector('.nav__item.menu');
@@ -14,6 +15,7 @@ const sideMenu = document.querySelector('.side-menu');
 const modalFeedback = document.querySelector('.modal-feedback');
 const feedbackBtn = document.querySelectorAll('.chat')
 const feedbackCloseBtn = modalFeedback.querySelector('.modal-feedback__btn');
+
 const modalCall = document.querySelector('.modal-call');
 const callBtn = document.querySelectorAll('.call');
 const callCloseBtn = modalCall.querySelector('.modal-call__btn');
@@ -30,27 +32,11 @@ const techWrapper = document.querySelector('.technics-wrappper');
 const techArrow = fullTechBtn.querySelector('.technics__arow');
 const techTxt = fullTechBtn.querySelector('.technics__toggle');
 
-const openModal = (modalName, closeClass, openClass) => {
-    modalName.classList.add(openClass);
-    modalName.classList.remove(closeClass);
-    mainWrapper.style.filter = "blur(5px)";
-}
 
-const closeModal = (modalName, closeClass, openClass) => {
-    modalName.classList.add(closeClass);
-    modalName.classList.remove(openClass);
-    modalName.style.transition = "all 0.3s ease";
-    mainWrapper.style.filter = "";
-    modalWrapper.classList.remove('wrapper__modal--show');
-}
-
-const caseShowHide = (wrapper, classShow, classHide, text, arow, arowClass) => {
-    wrapper.style.transition = "all 0.3s ease";
+function caseShowHide(wrapper, classShow, classHide, text, arow, arowClass) {
     wrapper.classList.toggle(classShow);
     wrapper.classList.toggle(classHide);
-
     arow.classList.toggle(arowClass);
-
     if (text.textContent === 'Показать все') {
         text.textContent = 'Скрыть';
     } else {
@@ -58,42 +44,55 @@ const caseShowHide = (wrapper, classShow, classHide, text, arow, arowClass) => {
     }
 }
 
-callBtn.forEach((elem) => {
-    elem.addEventListener('click', () => {
-        openModal(modalCall, 'modal-call--close', 'modal-call--open');
-        modalWrapper.classList.add('wrapper__modal--show');
-        document.body.style.overflow = 'hidden';
-    })
+burgerMenu.addEventListener('click', () => {
+    sideMenu.style.transition = "all 0.2s linear";
+    mainWrapper.style.filter = "blur(5px) invert(0.05)";
+    sideMenu.classList.add('side-menu--open');
+    document.body.style.overflow = 'hidden';
+});
+
+closeMenu.addEventListener('click', () => {
+    sideMenu.classList.remove('side-menu--open')
+    mainWrapper.style.filter = "";
+    document.body.style.overflow = '';
 });
 
 feedbackBtn.forEach((elem) => {
     elem.addEventListener('click', () => {
-        openModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open');
-        modalWrapper.classList.add('wrapper__modal--show');
+        if (sideMenu.classList.contains('side-menu--open')) {
+            sideMenu.classList.remove('side-menu--open')
+        }
+        modalFeedback.style.transition = "all 0.1s linear";
+        mainWrapper.style.filter = "blur(5px) invert(0.05)";
+        modalFeedback.classList.add('modal-feedback--open');
         document.body.style.overflow = 'hidden';
     })
 });
 
 feedbackCloseBtn.addEventListener('click', () => {
-    closeModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open');
+    modalFeedback.classList.remove('modal-feedback--open');
+    mainWrapper.style.filter = "";
     document.body.style.overflow = '';
+});
+
+callBtn.forEach((elem) => {
+    elem.addEventListener('click', () => {
+        if (sideMenu.classList.contains('side-menu--open')) {
+            sideMenu.classList.remove('side-menu--open')
+        }
+        modalCall.style.transition = "all 0.1s linear";
+        mainWrapper.style.filter = "blur(5px) invert(0.05)";
+        modalCall.classList.add('modal-call--open');
+        document.body.style.overflow = 'hidden';
+    })
 });
 
 callCloseBtn.addEventListener('click', () => {
-    closeModal(modalCall, 'modal-call--close', 'modal-call--open');
+    modalCall.classList.remove('modal-call--open');
+    mainWrapper.style.filter = "";
     document.body.style.overflow = '';
 });
 
-burgerMenu.addEventListener('click', () => {
-    openModal(sideMenu, 'side-menu--close', 'side-menu--open');
-    modalWrapper.classList.add('wrapper__modal--show');
-    document.body.style.overflow = 'hidden';
-});
-
-closeMenu.addEventListener('click', () => {
-    closeModal(sideMenu, 'side-menu--close', 'side-menu--open');
-    document.body.style.overflow = '';
-});
 
 fullBrendsBtn.addEventListener('click', () => {
     caseShowHide(brendWrapper, 'brend-wrappper--show', 'brend-wrappper--hide', brendsTxt, brendArrow, 'brends__arow--transform');
@@ -104,12 +103,13 @@ fullTechBtn.addEventListener('click', () => {
 });
 
 
-modalWrapper.addEventListener('click', (e) => {
-    if (e.target === modalWrapper) {
-        closeModal(sideMenu, 'side-menu--close', 'side-menu--open');
-        closeModal(modalCall, 'modal-call--close', 'modal-call--open');
-        closeModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open');
+mainWrapper.addEventListener('click', (e) => {
+    if (e.target === mainWrapper) {
+        sideMenu.classList.remove('side-menu--open');
+        modalCall.classList.remove('modal-call--open');
+        modalFeedback.classList.remove('modal-feedback--open');
+        mainWrapper.style.filter = "";
+        document.body.style.overflow = '';
     }
-    document.body.style.overflow = '';
 })
 

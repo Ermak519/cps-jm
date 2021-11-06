@@ -7,7 +7,7 @@
     height: 100vh;
     z-index: 3;
     
-    transform: scaleX(0);
+    transform: translateX(100%) scaleX(0);
 
     @media (min-width: 1120px) {
         width: 440px;
@@ -77,14 +77,9 @@
                 margin-top: 40px;
             }
     }
-    
-    &--close{
-        transform: translateX(100%) scaleX(0);
-    }
 
     &--open{
-        transition: all 0.3s ease-in-out;
-        transform-origin: top right;
+        transition: all 0.1s linear;
         transform: translateX(0) scaleX(1);
     }
 }
