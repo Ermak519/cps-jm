@@ -2,6 +2,7 @@ import '../scss/style.scss';
 
 console.log('Works!');
 
+const modalWrapper = document.querySelector('.wrapper__modal');
 const mainWrapper = document.querySelector('.wrapper__main');
 
 //боковое меню
@@ -40,6 +41,7 @@ const closeModal = (modalName, closeClass, openClass) => {
     modalName.classList.remove(openClass);
     modalName.style.transition = "all 0.3s ease";
     mainWrapper.style.filter = "";
+    modalWrapper.classList.remove('wrapper__modal--show');
 }
 
 const caseShowHide = (wrapper, classShow, classHide, text, arow, arowClass) => {
@@ -58,7 +60,8 @@ const caseShowHide = (wrapper, classShow, classHide, text, arow, arowClass) => {
 
 callBtn.forEach((elem) => {
     elem.addEventListener('click', () => {
-        openModal(modalCall, 'modal-call--close', 'modal-call--open')
+        openModal(modalCall, 'modal-call--close', 'modal-call--open');
+        modalWrapper.classList.add('wrapper__modal--show');
         document.body.style.overflow = 'hidden';
     })
 });
@@ -66,6 +69,7 @@ callBtn.forEach((elem) => {
 feedbackBtn.forEach((elem) => {
     elem.addEventListener('click', () => {
         openModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open');
+        modalWrapper.classList.add('wrapper__modal--show');
         document.body.style.overflow = 'hidden';
     })
 });
@@ -82,6 +86,7 @@ callCloseBtn.addEventListener('click', () => {
 
 burgerMenu.addEventListener('click', () => {
     openModal(sideMenu, 'side-menu--close', 'side-menu--open');
+    modalWrapper.classList.add('wrapper__modal--show');
     document.body.style.overflow = 'hidden';
 });
 
@@ -99,13 +104,12 @@ fullTechBtn.addEventListener('click', () => {
 });
 
 
-mainWrapper.addEventListener('click', (e) => {
-    if (e.target === mainWrapper) {
+modalWrapper.addEventListener('click', (e) => {
+    if (e.target === modalWrapper) {
         closeModal(sideMenu, 'side-menu--close', 'side-menu--open');
         closeModal(modalCall, 'modal-call--close', 'modal-call--open');
         closeModal(modalFeedback, 'modal-feedback--close', 'modal-feedback--open');
     }
+    document.body.style.overflow = '';
 })
-
-
 
