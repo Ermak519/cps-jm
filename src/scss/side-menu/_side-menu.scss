@@ -14,6 +14,10 @@
     line-height: 24px;
     letter-spacing: -0.2px;
 
+    @media (min-width: 360px) {
+        width: 360px;
+    }
+
     @media (min-width: 1120px) {
         transform: scaleX(1);
 
