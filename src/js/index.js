@@ -1,10 +1,11 @@
 import '../scss/style.scss';
 
-console.log('Works!');
-
-
 const mainWrapper = document.querySelector('.wrapper__main');
-const main = document.querySelector('.main');
+const modalWrapper = document.querySelector('.wrapper__modals');
+
+const sideMenuCloseModal = modalWrapper.querySelector('.menu-wrap');
+const feedbackCloseModal = modalWrapper.querySelector('.feedback-wrap');
+const callCloseModal = modalWrapper.querySelector('.call-wrap');
 
 //боковое меню
 const burgerMenu = document.querySelector('.nav__item.menu');
@@ -32,7 +33,6 @@ const techWrapper = document.querySelector('.technics-wrappper');
 const techArrow = fullTechBtn.querySelector('.technics__arow');
 const techTxt = fullTechBtn.querySelector('.technics__toggle');
 
-
 function caseShowHide(wrapper, classShow, classHide, text, arow, arowClass) {
     wrapper.classList.toggle(classShow);
     wrapper.classList.toggle(classHide);
@@ -44,38 +44,39 @@ function caseShowHide(wrapper, classShow, classHide, text, arow, arowClass) {
     }
 }
 
-burgerMenu.addEventListener('click', () => {
-    sideMenu.style.transition = "all 0.2s linear";
+function openModal(modal, open) {
+    modal.style.transition = "all 0.2s linear";
     mainWrapper.style.filter = "blur(5px) invert(0.05)";
-    sideMenu.classList.add('side-menu--open');
+    modal.classList.add(open);
     document.body.style.overflow = 'hidden';
-});
+}
 
-closeMenu.addEventListener('click', (e) => {
-    if (e.target !== sideMenu) {
-        sideMenu.classList.remove('side-menu--open')
-    }
-    sideMenu.classList.remove('side-menu--open')
+function closeModal(modal, close) {
+    modal.classList.remove(close)
     mainWrapper.style.filter = "";
     document.body.style.overflow = '';
+}
+
+burgerMenu.addEventListener('click', () => {
+    openModal(sideMenu, 'side-menu--open');
 });
+
+closeMenu.addEventListener('click', () => {
+    closeModal(sideMenu, 'side-menu--open');
+});
+
 
 feedbackBtn.forEach((elem) => {
     elem.addEventListener('click', () => {
         if (sideMenu.classList.contains('side-menu--open')) {
             sideMenu.classList.remove('side-menu--open')
         }
-        modalFeedback.style.transition = "all 0.1s linear";
-        mainWrapper.style.filter = "blur(5px) invert(0.05)";
-        modalFeedback.classList.add('modal-feedback--open');
-        document.body.style.overflow = 'hidden';
+        openModal(modalFeedback, 'modal-feedback--open');
     })
 });
 
 feedbackCloseBtn.addEventListener('click', () => {
-    modalFeedback.classList.remove('modal-feedback--open');
-    mainWrapper.style.filter = "";
-    document.body.style.overflow = '';
+    closeModal(modalFeedback, 'modal-feedback--open');
 });
 
 callBtn.forEach((elem) => {
@@ -83,17 +84,12 @@ callBtn.forEach((elem) => {
         if (sideMenu.classList.contains('side-menu--open')) {
             sideMenu.classList.remove('side-menu--open')
         }
-        modalCall.style.transition = "all 0.1s linear";
-        mainWrapper.style.filter = "blur(5px) invert(0.05)";
-        modalCall.classList.add('modal-call--open');
-        document.body.style.overflow = 'hidden';
+        openModal(modalCall, 'modal-call--open');
     })
 });
 
 callCloseBtn.addEventListener('click', () => {
-    modalCall.classList.remove('modal-call--open');
-    mainWrapper.style.filter = "";
-    document.body.style.overflow = '';
+    closeModal(modalCall, 'modal-call--open');
 });
 
 
@@ -106,13 +102,23 @@ fullTechBtn.addEventListener('click', () => {
 });
 
 
-mainWrapper.addEventListener('click', (e) => {
-    if (e.target === mainWrapper) {
-        sideMenu.classList.remove('side-menu--open');
-        modalCall.classList.remove('modal-call--open');
-        modalFeedback.classList.remove('modal-feedback--open');
-        mainWrapper.style.filter = "";
-        document.body.style.overflow = '';
+sideMenuCloseModal.addEventListener('click', (e) => {
+    if (e.target === sideMenuCloseModal) {
+        closeModal(sideMenu, 'side-menu--open');
     }
-})
+});
+
+feedbackCloseModal.addEventListener('click', (e) => {
+    if (e.target === feedbackCloseModal) {
+        closeModal(modalFeedback, 'modal-feedback--open');
+    }
+});
+
+callCloseModal.addEventListener('click', (e) => {
+    if (e.target === callCloseModal) {
+        closeModal(modalCall, 'modal-call--open');
+    }
+});
+
+
 

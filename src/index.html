@@ -661,122 +661,127 @@
         </div>
 
         <!--* модалки   -->
-        <aside class="side-menu">
-            <div class="container">
-                <nav class="nav-side">
-                    <ul class="side-menu__list nav">
-                        <li class="side-menu__item nav__close" tabindex="1">
-                            <img src="./img/cross.svg" alt="close-menu">
-                        </li>
-                        <li class="side-menu__item nav__logo">
-                            <img src="./img/logo.svg" alt="main-logo">
-                        </li>
-                        <li class="side-menu__item nav__search" tabindex="3">
-                            <img src="./img/search.svg" alt="search">
-                        </li>
-                    </ul>
-                </nav>
-                <section class="side-menu__section section-menu">
-                    <nav class="section-menu__nav">
-                        <ul class="section-menu__list">
-                            <li class="section-menu__item" tabindex="4">Ремонт техники
+        <div class="wrapper__modals">
+            <aside class="side-menu">
+                <div class="container">
+                    <nav class="nav-side">
+                        <ul class="side-menu__list nav">
+                            <li class="side-menu__item nav__close" tabindex="1">
+                                <img src="./img/cross.svg" alt="close-menu">
                             </li>
-                            <li class="section-menu__item" tabindex="5">Услуги и сервисы</li>
-                            <li class="section-menu__item" tabindex="6">Корпоративным клиентам</li>
-                            <li class="section-menu__item" tabindex="7">Продавцам техники</li>
-                            <li class="section-menu__item" tabindex="8">Партнерам</li>
-                            <li class="section-menu__item" tabindex="9">Производителям</li>
-                            <li class="section-menu__item" tabindex="10">Наши сервисные центры</li>
-                            <li class="section-menu__item" tabindex="11">Контакты</li>
+                            <li class="side-menu__item nav__logo">
+                                <img src="./img/logo.svg" alt="main-logo">
+                            </li>
+                            <li class="side-menu__item nav__search" tabindex="3">
+                                <img src="./img/search.svg" alt="search">
+                            </li>
                         </ul>
                     </nav>
-                </section>
-                <footer class="side-menu__footer footer">
-                    <ul class="footer__contacts footer__list">
-                        <li class="footer__item call" tabindex="12">
-                            <img src="./img/call.svg" alt="phone">
-                        </li>
-                        <li class="footer__item chat chat" tabindex="13">
-                            <img src="./img/chat.svg" alt="chat-logo">
-                        </li>
-                        <li class="footer__item profile" tabindex="14">
-                            <img src="./img/profile.svg" alt="person-logo">
-                        </li>
-                    </ul>
-                    <ul class="footer__feedback feetback">
-                        <li class="feetback__item footer__mail" tabindex="15">
-                            <p>mail@cps.com</p>
-                        </li>
-                        <li class="feetback__item footer__phone" tabindex="16">
-                            <p>8 800 890 8900</p>
-                        </li>
-                    </ul>
-                    <div class="footer__lang-toggler toggler">
-                        <ul class="toggler__list">
-                            <li class="toggler__item toggler__item--focus" tabindex="17">RU</li>
-                            <li class="toggler__item" tabindex="18">EN</li>
-                            <li class="toggler__item" tabindex="19">CH</li>
+                    <section class="side-menu__section section-menu">
+                        <nav class="section-menu__nav">
+                            <ul class="section-menu__list">
+                                <li class="section-menu__item" tabindex="4">Ремонт техники
+                                </li>
+                                <li class="section-menu__item" tabindex="5">Услуги и сервисы</li>
+                                <li class="section-menu__item" tabindex="6">Корпоративным клиентам</li>
+                                <li class="section-menu__item" tabindex="7">Продавцам техники</li>
+                                <li class="section-menu__item" tabindex="8">Партнерам</li>
+                                <li class="section-menu__item" tabindex="9">Производителям</li>
+                                <li class="section-menu__item" tabindex="10">Наши сервисные центры</li>
+                                <li class="section-menu__item" tabindex="11">Контакты</li>
+                            </ul>
+                        </nav>
+                    </section>
+                    <footer class="side-menu__footer footer">
+                        <ul class="footer__contacts footer__list">
+                            <li class="footer__item call" tabindex="12">
+                                <img src="./img/call.svg" alt="phone">
+                            </li>
+                            <li class="footer__item chat chat" tabindex="13">
+                                <img src="./img/chat.svg" alt="chat-logo">
+                            </li>
+                            <li class="footer__item profile" tabindex="14">
+                                <img src="./img/profile.svg" alt="person-logo">
+                            </li>
                         </ul>
+                        <ul class="footer__feedback feetback">
+                            <li class="feetback__item footer__mail" tabindex="15">
+                                <p>mail@cps.com</p>
+                            </li>
+                            <li class="feetback__item footer__phone" tabindex="16">
+                                <p>8 800 890 8900</p>
+                            </li>
+                        </ul>
+                        <div class="footer__lang-toggler toggler">
+                            <ul class="toggler__list">
+                                <li class="toggler__item toggler__item--focus" tabindex="17">RU</li>
+                                <li class="toggler__item" tabindex="18">EN</li>
+                                <li class="toggler__item" tabindex="19">CH</li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+                <div class="menu-wrap"></div>
+            </aside>
+
+            <aside class="modal-feedback">
+                <div class="container">
+                    <nav class="modal-feedback__nav">
+                        <button class="modal-feedback__btn">
+                            <img src="./img/cross.svg" alt="close-button">
+                        </button>
+                    </nav>
+                    <h2 class="modal-feedback__title">
+                        Обратная связь
+                    </h2>
+                    <div class="modal-feedback__form form">
+                        <form action="#" method="post" class="form__feedback">
+                            <input type="text" placeholder="Имя">
+                            <input type="phone" placeholder="Телефон">
+                            <input type="email" placeholder="Электронная почта">
+                            <textarea name="message" placeholder="Сообщение" cols="30" rows="10"></textarea>
+                            <p>
+                                Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с
+                                нашей политикой конфиденциальности
+                            </p>
+                            <button type="submit">
+                                <p>ОТПРАВИТЬ</p>
+                                <img src="./img/goside.svg" alt="link">
+                            </button>
+                        </form>
                     </div>
-                </footer>
-            </div>
-        </aside>
+                </div>
+                <div class="feedback-wrap"></div>
+            </aside>
 
-        <aside class="modal-feedback">
-            <div class="container">
-                <nav class="modal-feedback__nav">
-                    <button class="modal-feedback__btn">
-                        <img src="./img/cross.svg" alt="close-button">
-                    </button>
-                </nav>
-                <h2 class="modal-feedback__title">
-                    Обратная связь
-                </h2>
-                <div class="modal-feedback__form form">
-                    <form action="#" method="post" class="form__feedback">
-                        <input type="text" placeholder="Имя">
-                        <input type="phone" placeholder="Телефон">
-                        <input type="email" placeholder="Электронная почта">
-                        <textarea name="message" placeholder="Сообщение" cols="30" rows="10"></textarea>
-                        <p>
-                            Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с
-                            нашей политикой конфиденциальности
-                        </p>
-                        <button type="submit">
-                            <p>ОТПРАВИТЬ</p>
-                            <img src="./img/goside.svg" alt="link">
+            <aside class="modal-call">
+                <div class="container">
+                    <nav class="modal-call__nav">
+                        <button class="modal-call__btn">
+                            <img src="./img/cross.svg" alt="close-button">
                         </button>
-                    </form>
+                    </nav>
+                    <div class="modal-call__title">
+                        Заказать звонок
+                    </div>
+                    <div class="modal-call__form form">
+                        <form action="post" class="form__call">
+                            <input type="phone" placeholder="Телефон">
+                            <p>
+                                Нажимая “отправить”, вы даете согласие на обработку персональных данных и
+                                соглашаетесь с
+                                нашей политикой конфиденциальности
+                            </p>
+                            <button type="submit">
+                                <p>ОТПРАВИТЬ</p>
+                                <img src="./img/goside.svg" alt="link">
+                            </button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </aside>
-
-        <aside class="modal-call">
-            <div class="container">
-                <nav class="modal-call__nav">
-                    <button class="modal-call__btn">
-                        <img src="./img/cross.svg" alt="close-button">
-                    </button>
-                </nav>
-                <div class="modal-call__title">
-                    Заказать звонок
-                </div>
-                <div class="modal-call__form form">
-                    <form action="post" class="form__call">
-                        <input type="phone" placeholder="Телефон">
-                        <p>
-                            Нажимая “отправить”, вы даете согласие на обработку персональных данных и
-                            соглашаетесь с
-                            нашей политикой конфиденциальности
-                        </p>
-                        <button type="submit">
-                            <p>ОТПРАВИТЬ</p>
-                            <img src="./img/goside.svg" alt="link">
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </aside>
+                <div class="call-wrap"></div>
+            </aside>
+        </div>
 
         <!--* модалки-->
     </div>

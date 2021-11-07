@@ -81,6 +81,7 @@
     &--open{
         transition: all 0.1s linear;
         transform: translateX(0) scaleX(1);
+        z-index: 3;
     }
 }
 
