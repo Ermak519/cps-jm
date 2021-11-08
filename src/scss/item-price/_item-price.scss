@@ -9,7 +9,7 @@
         flex-shrink: 0;
         justify-content: space-around;
         align-items: center;
-        flex-grow: 1;
+        
     
         background: $btnForm;
         color: $bgBody;
@@ -19,6 +19,7 @@
         border-radius: 16px;
         padding-left: 12px;
         padding-right: 8px;
+        margin-left: 20px;
     
         height: 32px;
     
@@ -33,6 +34,7 @@
 
     &__cost{
         margin-bottom: 16px;
+        flex-grow: 1;
         p:first-child{
             color: $btnText;
         }
@@ -48,13 +50,16 @@
 
     &__term{
         display: flex;
-        justify-content: space-between;
+        flex: 1;
+        align-items: stretch;
+
         span:first-child{
             color: $btnText;
         }
     
-        p {
-            margin-right: 20px;;
+        ~p {
+            min-width: 79px;
+            margin-right: 20px;
         }
     }
 }
