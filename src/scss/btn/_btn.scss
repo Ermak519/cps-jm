@@ -9,7 +9,10 @@
         cursor: pointer;
     
         &:hover{
-            filter: opacity(70%);
+            box-sizing: border-box;
+            border: 2px solid $itemFocus;
+            background-color: $bgBody;
+            border-radius: 6px;
         }
     
         &:focus{

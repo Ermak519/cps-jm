@@ -71,6 +71,14 @@ p{
 
 a {
   text-decoration: none;
+
+  &:link{
+    color: $btnText;
+  }
+  
+  &:visited{
+    color: $btnText;
+  }
 }
 
 button{

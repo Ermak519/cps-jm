@@ -1,13 +1,14 @@
 .side-menu{
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     display: block;
     width: 320px;
-    height: 100vh;
+    height: 100%;
     z-index: 3;
+    overflow: hidden;
 
     color: $pText;
     font-family: 'TT Lakes Medium';
@@ -23,6 +24,9 @@
     @media (min-width: 1120px) {
         transform: scaleX(1) translateX(0);
         width: 320px;
+        position: fixed;
+        top: 0;
+        left: auto;
 
         .container{
             box-shadow: none;
@@ -43,7 +47,8 @@
     }
 
     &__footer{
-        margin-left: 24px;
+        padding-left: 24px;
+        padding-bottom: 32px;
     }
 
     &__item{

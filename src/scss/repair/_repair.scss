@@ -1,4 +1,12 @@
 .repair{
+    &::before{
+        content: "";
+        display: block;
+        border: 1px solid #D9FFF5;
+        width: 100%;
+
+    }
+
     &__title{
         font-family: 'TT Lakes Regular';
         font-size: 16px;
@@ -6,18 +14,22 @@
         text-align: left;
         color: $btnText;
         background: linear-gradient(270deg, $bgColor 0%, $bgBody 98.61%);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
         display: flex;
         justify-content: start;
         align-items: center;
     
         min-width: 320px;
-        margin-top: 15px;
         padding: 16px;
+
+        @media (min-width: 768px) {
+            padding-left: 24px;
+        }
     
         P{
             flex: 1;
-            margin-left: 16px;
             text-transform: uppercase;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
         }
     }
 }

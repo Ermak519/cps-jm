@@ -7,6 +7,11 @@ const sideMenuCloseModal = modalWrapper.querySelector('.menu-wrap');
 const feedbackCloseModal = modalWrapper.querySelector('.feedback-wrap');
 const callCloseModal = modalWrapper.querySelector('.call-wrap');
 
+const titleArticle = document.querySelector('.title__article');
+const fullTitle = document.querySelector('.full-title__btn');
+const titleArow = document.querySelector('.full-title__btn img');
+const titleText = document.querySelector('.full-title__btn p');
+
 //боковое меню
 const burgerMenu = document.querySelector('.nav__item.menu');
 const closeMenu = document.querySelector('.nav__close');
@@ -48,13 +53,11 @@ function openModal(modal, open) {
     modal.style.transition = "all 0.2s linear";
     mainWrapper.style.filter = "blur(5px) invert(0.05)";
     modal.classList.add(open);
-    document.body.style.overflow = 'hidden';
 }
 
 function closeModal(modal, close) {
     modal.classList.remove(close)
     mainWrapper.style.filter = "";
-    document.body.style.overflow = '';
 }
 
 burgerMenu.addEventListener('click', () => {

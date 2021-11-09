@@ -1,8 +1,11 @@
 .descr{
+    padding-bottom: 25px;
+    
     @media (min-width: 768px) {
         display: flex;
         padding-right: 24px;
         padding-left: 24px;
+        padding-bottom: 32px;
     }
 
     &__title{
@@ -18,6 +21,7 @@
 
     &__media{
         width: 100%;
+
     }
 }
 
