@@ -1,5 +1,6 @@
 .descr{
-    padding-bottom: 25px;
+    padding-bottom: 24px;
+    padding-top: 24px;
     
     @media (min-width: 768px) {
         display: flex;
@@ -13,7 +14,7 @@
         padding-left: 16px;
 
         @media (min-width: 768px) {
-            padding-right: 40px;
+            padding-right: 48px;
             padding-left: 0;
 
         }

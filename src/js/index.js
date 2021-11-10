@@ -7,10 +7,6 @@ const sideMenuCloseModal = modalWrapper.querySelector('.menu-wrap');
 const feedbackCloseModal = modalWrapper.querySelector('.feedback-wrap');
 const callCloseModal = modalWrapper.querySelector('.call-wrap');
 
-const titleArticle = document.querySelector('.title__article');
-const fullTitle = document.querySelector('.full-title__btn');
-const titleArow = document.querySelector('.full-title__btn img');
-const titleText = document.querySelector('.full-title__btn p');
 
 //боковое меню
 const burgerMenu = document.querySelector('.nav__item.menu');
@@ -74,6 +70,7 @@ feedbackBtn.forEach((elem) => {
         if (sideMenu.classList.contains('side-menu--open')) {
             sideMenu.classList.remove('side-menu--open')
         }
+        sideMenu.style.filter = "blur(5px) invert(0.05)";
         openModal(modalFeedback, 'modal-feedback--open');
     })
 });
@@ -87,12 +84,14 @@ callBtn.forEach((elem) => {
         if (sideMenu.classList.contains('side-menu--open')) {
             sideMenu.classList.remove('side-menu--open')
         }
+        sideMenu.style.filter = "blur(5px) invert(0.05)";
         openModal(modalCall, 'modal-call--open');
     })
 });
 
 callCloseBtn.addEventListener('click', () => {
     closeModal(modalCall, 'modal-call--open');
+    sideMenu.style.filter = "";
 });
 
 
@@ -114,12 +113,14 @@ sideMenuCloseModal.addEventListener('click', (e) => {
 feedbackCloseModal.addEventListener('click', (e) => {
     if (e.target === feedbackCloseModal) {
         closeModal(modalFeedback, 'modal-feedback--open');
+        sideMenu.style.filter = "";
     }
 });
 
 callCloseModal.addEventListener('click', (e) => {
     if (e.target === callCloseModal) {
         closeModal(modalCall, 'modal-call--open');
+        sideMenu.style.filter = "";
     }
 });
 

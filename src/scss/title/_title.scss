@@ -14,6 +14,17 @@
                 margin-right: 16px;
             }
         }
+
+        @media (min-width: 768px) {
+            margin-left: 24px;
+            margin-bottom: 32px;
+            
+            &::before{
+                content: "";
+                margin-left: -28px;
+                margin-right: 20px;
+            }
+        }
     }
 
     &__container {
@@ -39,8 +50,9 @@
         @media (min-width: 768px) {
             height: 160px;
             overflow: hidden;
-            line-height: 24px;
+            line-height: 20px;
             letter-spacing: 0.2px;
+            margin-bottom: 10px;
         }
     }
 

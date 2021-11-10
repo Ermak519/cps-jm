@@ -8,6 +8,7 @@
         padding-left: 16px;
         padding-right: 16px;
         padding-bottom: 25px;
+        padding-top: 16px;
     
         font-size: 14px;
         line-height: 20px;
@@ -18,8 +19,10 @@
     
         @media (min-width: 768px) {
             width: 420px;
+            padding-top: 24px;
             padding-left: 24px;
-            padding-bottom: 24px;
+            padding-bottom: 16px;
+            line-height: 20px;
         }
     }
 

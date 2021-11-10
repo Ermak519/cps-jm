@@ -19,7 +19,7 @@
  
     &__modals{
         .menu-wrap{
-            height: 100vh;
+            height: 100%;
             width: 100vw;
             position: absolute;
             top: 0;
@@ -35,7 +35,7 @@
         }
 
         .feedback-wrap{
-            height: 100vh;
+            height: 100%;
             width: 100vw;
             position: absolute;
             top: 0;
@@ -47,7 +47,7 @@
         }
 
         .call-wrap{
-            height: 100vh;
+            height: 100%;
             width: 100vw;
             position: absolute;
             top: 0;
@@ -56,6 +56,10 @@
             @media (min-width: 1120px) {
                 right: 440px;
             }
+        }
+
+        a{
+            color: $btnForm;
         }
     }
 }

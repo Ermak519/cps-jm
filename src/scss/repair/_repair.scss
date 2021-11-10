@@ -2,7 +2,7 @@
     &::before{
         content: "";
         display: block;
-        border: 1px solid #D9FFF5;
+        border: 1px solid $elemWrapper;
         width: 100%;
 
     }

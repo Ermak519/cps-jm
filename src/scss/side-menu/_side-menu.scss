@@ -1,5 +1,4 @@
 .side-menu{
-    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -8,7 +7,7 @@
     width: 320px;
     height: 100%;
     z-index: 3;
-    overflow: hidden;
+    
 
     color: $pText;
     font-family: 'TT Lakes Medium';
@@ -27,11 +26,16 @@
         position: fixed;
         top: 0;
         left: auto;
+        overflow: hidden;
 
         .container{
             box-shadow: none;
             background-color: $bgBody;
         }
+    }
+
+    p{
+        color: $pText;
     }
 
     .container{
@@ -60,7 +64,7 @@
         justify-content: space-between;
         align-items: center;
         margin-left: 24px;
-        margin-top: 19px;
+        margin-top: 32px;
         margin-bottom: 25px;
     }
 
