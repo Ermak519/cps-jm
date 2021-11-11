@@ -13,6 +13,11 @@
     
             border: 1px solid $borderColor;
             border-radius: 8px;
+
+            @media (max-height: 600px) {
+                margin-bottom: 10px;
+            }
+    
         }
     
         textarea{
@@ -30,6 +35,10 @@
     
             border: 1px solid $borderColor;
             border-radius: 8px;
+
+            @media (max-height: 600px) {
+                margin-bottom: 10px;
+            }
         }
     
         p{
@@ -37,6 +46,10 @@
             line-height: 16px;
             color: $btnText;
             margin-bottom: 19px;
+
+            @media (max-height: 600px) {
+                margin-bottom: 10px;
+            }
         }
     
         button{
@@ -81,6 +94,10 @@
     
             border: 1px solid $borderColor;
             border-radius: 8px;
+
+            @media (max-height: 600px) {
+                margin-bottom: 10px;
+            }
         }
     
         textarea{
@@ -98,6 +115,10 @@
     
             border: 1px solid $borderColor;
             border-radius: 8px;
+
+            @media (max-height: 600px) {
+                margin-bottom: 10px;
+            }
         }
     
         p{
@@ -105,6 +126,10 @@
             line-height: 16px;
             color: $btnText;
             margin-bottom: 19px;
+
+            @media (max-height: 600px) {
+                margin-bottom: 10px;
+            }
         }
     
         button{

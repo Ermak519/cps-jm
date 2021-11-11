@@ -4,7 +4,7 @@
     right: 0;
     display: block;
     width: 320px;
-    height: 100vh;
+    height: 100%;
     z-index: 1;
     
     transform:  translateX(100%) scaleX(0);
@@ -16,7 +16,7 @@
     .container{
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
         display: flex;
-        height: 100vh;
+        height: 100%;
         flex-direction: column;
         background-color: $bgBody;
 
@@ -49,6 +49,11 @@
         margin-top: 24px;
         margin-bottom: 32px;
 
+        @media (max-height: 600px) {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
         @media (min-width: 1120px) {
             position: absolute;
             margin-top: 40px;
@@ -73,10 +78,15 @@
                 margin-left: -20px;
                 margin-right: 16px;
             }
-            
-            @media (min-width: 1120px) {
-                margin-top: 40px;
-            }
+
+        @media (max-height: 600px) {
+            margin-bottom: 10px;
+        }
+
+        
+        @media (min-width: 1120px) {
+            margin-top: 40px;
+        }
     }
 
     &--open{
@@ -84,5 +94,6 @@
         transform-origin: top right;
         transform: translateX(0) scaleX(1);
         z-index: 3;
+
     }
 }

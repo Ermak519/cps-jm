@@ -24,6 +24,11 @@
 
         &:not(:last-child){
             margin-bottom: 24px;
+
+            @media (max-height: 600px) {
+                margin-bottom: 10px;
+            }
+
             @media (min-width: 768px) {
                 margin-bottom: 32px;
             }

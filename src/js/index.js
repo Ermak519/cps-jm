@@ -77,6 +77,7 @@ feedbackBtn.forEach((elem) => {
 
 feedbackCloseBtn.addEventListener('click', () => {
     closeModal(modalFeedback, 'modal-feedback--open');
+    sideMenu.style.filter = "";
 });
 
 callBtn.forEach((elem) => {
